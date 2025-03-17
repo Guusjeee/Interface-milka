@@ -1,12 +1,29 @@
-const images = ["milka1.jpg", "milka2.jpg", "milka3.jpg"]; 
-let currentIndex = 0;
+function setupSlider(sliderId) {
+    const sliderTrack = document.getElementById(sliderId);
+    const images = sliderTrack.querySelectorAll("img");
+    const totalImages = images.length;
+    let currentIndex = 0;
 
-document.getElementById("next").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    document.getElementById("choco-img").src = images[currentIndex];
-});
+    function updateSlider() {
+        const imageWidth = images[0].clientWidth; 
+        const newTransform = -currentIndex * imageWidth + "px";
+        sliderTrack.style.transform = `translateX(${newTransform})`;
+    }
 
-document.getElementById("prev").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    document.getElementById("choco-img").src = images[currentIndex];
-});
+    document.querySelector(`[data-slider="${sliderId}"].next`).addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalImages; 
+        updateSlider();
+    });
+
+    document.querySelector(`[data-slider="${sliderId}"].prev`).addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateSlider();
+    });
+
+  
+    window.addEventListener("resize", updateSlider);
+}
+
+
+setupSlider("favorites-slider");
+setupSlider("new-products-slider");

@@ -9,7 +9,9 @@
 <body>
 
     <header>
-        <div class="logo">Milka</div>
+        <div class="logo">
+            <img src="media/milkalogo.png" alt="Milka Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">HOME</a></li>
@@ -21,19 +23,54 @@
     </header>
 
     <section class="hero">
-        <img src="milka-banner.jpg" alt="Milka Chocolade">
+        <img src="media/milkatest.jpg" alt="Milka Chocolade">
     </section>
 
-    <section class="favorites">
-        <h2>FAVORITES</h2>
-        <div class="slider">
-            <button id="prev">&lt;</button>
-            <div class="slider-container">
-                <img id="choco-img" src="milka1.jpg" alt="Milka reep">
+    <section class="products-section">
+        <!-- FAVORITES -->
+        <div class="product-container">
+            <h2>FAVORITES</h2>
+            <div class="slider">
+                <button class="prev" data-slider="favorites">&lt;</button>
+                <div class="slider-container">
+                    <div class="slider-track" id="favorites-slider">
+                        <img src="media/milka1.png" alt="Milka reep">
+                        <img src="media/milka2.jpg" alt="Milka reep">
+                        <img src="media/milka3.jpg" alt="Milka reep">
+                        <img src="media/milka4.jpg" alt="Milka reep">
+                    </div>
+                </div>
+                <button class="next" data-slider="favorites">&gt;</button>
             </div>
-            <button id="next">&gt;</button>
+        </div>
+
+     
+        <div class="product-container">
+            <h2>NEW PRODUCTS</h2>
+            <div class="slider">
+                <button class="prev" data-slider="new-products">&lt;</button>
+                <div class="slider-container">
+                    <div class="slider-track" id="new-products-slider">
+                        <img src="media/new1.png" alt="Nieuwe reep">
+                        <img src="media/new2.avif" alt="Nieuwe reep">
+                        <img src="media/new3.avif" alt="Nieuwe reep">
+                        <img src="media/new4.png" alt="Nieuwe reep">
+                    </div>
+                </div>
+                <button class="next" data-slider="new-products">&gt;</button>
+            </div>
         </div>
     </section>
+
+    <footer>
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="#"><div class="icon facebook"></div></a>
+            <a href="#"><div class="icon twitter"></div></a>
+            <a href="#"><div class="icon instagram"></div></a>
+            <a href="#"><div class="icon youtube"></div></a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

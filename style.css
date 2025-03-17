@@ -6,21 +6,23 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header */
 header {
     background-color: #7359a0;
     color: white;
-    padding: 15px 0;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    height: 100px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+/* Logo */
+.logo img {
+    height: 60px;
 }
 
+/* Navigatie */
 nav ul {
     list-style: none;
     padding: 0;
@@ -29,27 +31,39 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
+/* Hero Afbeelding */
 .hero img {
     width: 100%;
-    max-height: 300px;
+    max-height: 350px;
     object-fit: cover;
 }
 
-.favorites {
-    margin: 20px 0;
-    background: white;
-    padding: 20px;
+/* Product-sectie */
+.products-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
 }
 
+.product-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slider */
 .slider {
     display: flex;
     align-items: center;
@@ -59,28 +73,65 @@ nav ul li a {
 
 .slider-container {
     width: 250px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 150px; 
     overflow: hidden;
+    position: relative;
+    border-radius: 10px;
 }
 
-.slider-container img {
-    max-width: 100%;
-    transition: opacity 0.5s ease-in-out;
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
+.slider-track img {
+    width: 250px;
+    height: 150px; 
+    object-fit: contain; 
+    flex-shrink: 0;
+}
+
+/* Pijltjes */
 button {
     background-color: #7359a0;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 5px;
 }
 
 button:hover {
     background-color: #5a4680;
 }
+
+/* Footer */
+footer {
+    background-color: #7359a0;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facebook { background: url('facebook.png') center/cover; }
+.twitter { background: url('twitter.png') center/cover; }
+.instagram { background: url('instagram.png') center/cover; }
+.youtube { background: url('youtube.png') center/cover; }
